@@ -62,7 +62,7 @@ and run one or more E2E tests in parallel or in sequence.
 
 Now push the changes to the repo, and watch Codeship run
 
-![Codeship run](images/codeship.png)
+![Codeship run](screenshots/codeship.png)
 
 ## Happy testing
 

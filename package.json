@@ -4,7 +4,9 @@
   "description": "> Cypress + Docker + Codeship = ❤️",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:verify": "cypress verify",
+    "cy:run": "cypress run"
   },
   "repository": {
     "type": "git",

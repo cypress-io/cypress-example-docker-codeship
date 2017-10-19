@@ -1,42 +1,26 @@
 > Cypress + Docker + Codeship = ❤️
 
+[ ![Codeship Status for cypress-io/cypress-example-docker-codeship](https://app.codeship.com/projects/c989dc20-2399-0135-8805-66761da64e8c/status?branch=master)](https://app.codeship.com/projects/222054)
+
 Running your Cypress E2E tests on Codeship Pro CI is very simple.
 You can either start with a base image
-[cypress/base](https://hub.docker.com/r/cypress/base/)
-or with an image that already includes Cypress tool
-[cypress/internal](https://hub.docker.com/r/cypress/internal/).
+[cypress/base](https://hub.docker.com/r/cypress/base/) with all dependencies.
 
 1. Create test image
 
-Use [Dockerfile](Dockerfile) to build a test image
-
-If you use `cypress/internal:cy-...` image, the Cypress will be installed
-globally, and you just need to copy the source and test files.
+Use [Dockerfile](Dockerfile) to build a test image.
+If you use `cypress/base` image you would need to install NPM dependencies
+that includes Cypress.
 
 ```
-# follows Codeship Node example
-# https://documentation.codeship.com/pro/languages-frameworks/nodejs/
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/cypress-io/cypress-example-docker-codeship.svg)](https://greenkeeper.io/)
-FROM cypress/internal:cy-0.19.2
+FROM cypress/base:6
 WORKDIR /app
 # Copy our test page and test files
 COPY index.html ./
 COPY cypress.json ./
+COPY package.json ./
 COPY cypress ./cypress
-```
-
-If you use `cypress/base` image you would need to install Cypress tool too.
-
-```
-FROM cypress/internal:cy-0.19.2
-RUN npm install -g cypress-cli
-RUN cypress install --cypress-version 0.19.2
-WORKDIR /app
-# Copy our test page and test files
-COPY index.html ./
-COPY cypress.json ./
-COPY cypress ./cypress
+RUN npm install
 ```
 
 2. Define Codeship build step
@@ -59,7 +43,17 @@ and run one or more E2E tests in parallel or in sequence.
 ```yaml
 - name: "Cypress E2E tests"
   service: cypress_codeship_test
-  command: cypress run
+  command: npm run cy:run
+```
+
+The `cy:run` command is an NPM script defined in [package.json](package.json)
+
+```json
+{
+    "scripts": {
+        "cy:run": "cypress run"
+    }
+}
 ```
 
 Now push the changes to the repo, and watch Codeship run

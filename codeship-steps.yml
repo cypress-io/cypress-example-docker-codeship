@@ -1,8 +1,11 @@
 - name: "Ls -la"
   service: cypress_codeship_test
-  command: ls -la
-- name: "Cypress E2E tests"
-  service: cypress_codeship_test
-  command: npm --version
+  command: ls -la node_modules/.bin
 
-  # command: $(npm bin)/cypress run
+- name: "Verify Cypress"
+  service: cypress_codeship_test
+  command: npm run cy:verify
+
+- name: "Run Cypress"
+  service: cypress_codeship_test
+  command: npm run cy:run

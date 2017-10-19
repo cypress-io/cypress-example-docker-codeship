@@ -43,7 +43,17 @@ and run one or more E2E tests in parallel or in sequence.
 ```yaml
 - name: "Cypress E2E tests"
   service: cypress_codeship_test
-  command: $(npm bin)/cypress run
+  command: npm run cy:run
+```
+
+The `cy:run` command is an NPM script defined in [package.json](package.json)
+
+```json
+{
+    "scripts": {
+        "cy:run": "cypress run"
+    }
+}
 ```
 
 Now push the changes to the repo, and watch Codeship run

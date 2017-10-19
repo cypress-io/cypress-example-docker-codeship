@@ -1,6 +1,6 @@
 > Cypress + Docker + Codeship = ❤️
 
-[ ![Codeship Status for cypress-io/cypress-example-docker-codeship](https://app.codeship.com/projects/c989dc20-2399-0135-8805-66761da64e8c/status?branch=master)](https://app.codeship.com/projects/222054)
+[ ![Codeship Status for cypress-io/cypress-example-docker-codeship](https://app.codeship.com/projects/c989dc20-2399-0135-8805-66761da64e8c/status?branch=master)](https://app.codeship.com/projects/222054) [![Greenkeeper badge](https://badges.greenkeeper.io/cypress-io/cypress-example-docker-codeship.svg)](https://greenkeeper.io/)
 
 Running your Cypress E2E tests on Codeship Pro CI is very simple.
 You can either start with a base image

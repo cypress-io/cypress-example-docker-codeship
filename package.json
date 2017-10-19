@@ -1,0 +1,23 @@
+{
+  "name": "cypress-example-docker-codeship",
+  "version": "1.0.0",
+  "description": "> Cypress + Docker + Codeship = ❤️",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypress-io/cypress-example-docker-codeship.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cypress-io/cypress-example-docker-codeship/issues"
+  },
+  "homepage": "https://github.com/cypress-io/cypress-example-docker-codeship#readme",
+  "devDependencies": {
+    "cypress": "^1.0.2"
+  }
+}

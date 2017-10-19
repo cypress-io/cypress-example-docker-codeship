@@ -13,7 +13,7 @@ If you use `cypress/base` image you would need to install NPM dependencies
 that includes Cypress.
 
 ```
-FROM cypress/base:8
+FROM cypress/base:6
 WORKDIR /app
 # Copy our test page and test files
 COPY index.html ./

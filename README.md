@@ -16,6 +16,8 @@ globally, and you just need to copy the source and test files.
 ```
 # follows Codeship Node example
 # https://documentation.codeship.com/pro/languages-frameworks/nodejs/
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/cypress-io/cypress-example-docker-codeship.svg)](https://greenkeeper.io/)
 FROM cypress/internal:cy-0.19.2
 WORKDIR /app
 # Copy our test page and test files

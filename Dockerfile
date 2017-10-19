@@ -7,3 +7,4 @@ COPY index.html ./
 COPY cypress.json ./
 COPY package.json ./
 COPY cypress ./cypress
+RUN npm install

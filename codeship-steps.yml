@@ -1,11 +1,17 @@
-- name: "Ls -la"
-  service: cypress_codeship_test
-  command: ls -la node_modules/.bin
+- type: parallel
+  steps:
+    - name: "print env vars"
+      service: cypress_codeship_test
+      command: $(npm bin)/print-env CI
 
-- name: "Verify Cypress"
-  service: cypress_codeship_test
-  command: npm run cy:verify
+    - name: "Ls -la"
+      service: cypress_codeship_test
+      command: ls -la node_modules/.bin
 
-- name: "Run Cypress"
-  service: cypress_codeship_test
-  command: DEBUG=cypress:* npm run cy:run
+    - name: "Verify Cypress"
+      service: cypress_codeship_test
+      command: npm run cy:verify
+
+    - name: "Run Cypress"
+      service: cypress_codeship_test
+      command: npm run cy:run

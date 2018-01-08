@@ -2,3 +2,5 @@ cypress_codeship_test:
   build:
     image: cypress/cypress_codeship_test
     dockerfile: Dockerfile
+  environment:
+    - DEBUG=cypress:*

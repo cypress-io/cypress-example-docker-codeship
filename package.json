@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-docker-codeship#readme",
   "devDependencies": {
-    "cypress": "^1.0.2"
+    "cypress": "^1.4.1"
   }
 }

@@ -8,4 +8,4 @@
 
 - name: "Run Cypress"
   service: cypress_codeship_test
-  command: npm run cy:run
+  command: DEBUG=cypress:* npm run cy:run

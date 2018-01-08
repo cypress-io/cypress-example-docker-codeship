@@ -12,6 +12,10 @@
       service: cypress_codeship_test
       command: npm run cy:verify
 
-    - name: "Run Cypress"
+    - name: "Run Cypress 1"
       service: cypress_codeship_test
-      command: npm run cy:run
+      command: npm run env:run
+
+    - name: "Run Cypress 2"
+      service: cypress_codeship_test
+      command: npm run env:run

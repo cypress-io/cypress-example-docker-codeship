@@ -29,7 +29,7 @@ Use [codeship-services.yml](codeship-services.yml) file to
 build `cypress/cypress_codeship_test` image (from the above Dockerfile).
 
 ```yaml
-cypress_codeship_test:
+cypress-codeship-test:
   build:
     image: cypress/cypress_codeship_test
     dockerfile: Dockerfile
@@ -42,7 +42,7 @@ and run one or more E2E tests in parallel or in sequence.
 
 ```yaml
 - name: "Cypress E2E tests"
-  service: cypress_codeship_test
+  service: cypress-codeship-test
   command: npm run cy:run
 ```
 

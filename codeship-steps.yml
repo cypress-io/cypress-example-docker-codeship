@@ -20,8 +20,8 @@
   steps:
     - name: "Run Cypress 1"
       service: cypress-codeship-test
-      command: npm run env:run:record -- --parallel --ci-group-id $CI_BUILD_ID
+      command: npm run env:run:record -- --parallel --ci-build-id $CI_BUILD_ID
 
     - name: "Run Cypress 2"
       service: cypress-codeship-test
-      command: npm run env:run:record -- --parallel --ci-group-id $CI_BUILD_ID
+      command: npm run env:run:record -- --parallel --ci-build-id $CI_BUILD_ID

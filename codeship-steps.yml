@@ -1,21 +1,21 @@
 - type: parallel
   steps:
     - name: "print env vars"
-      service: cypress_codeship_test
+      service: cypress-codeship-test
       command: node_modules/.bin/print-env CI
 
     - name: "Ls -la"
-      service: cypress_codeship_test
+      service: cypress-codeship-test
       command: ls -la node_modules/.bin
 
     - name: "Verify Cypress"
-      service: cypress_codeship_test
+      service: cypress-codeship-test
       command: npm run cy:verify
 
     - name: "Run Cypress 1"
-      service: cypress_codeship_test
+      service: cypress-codeship-test
       command: npm run env:run
 
     - name: "Run Cypress 2"
-      service: cypress_codeship_test
+      service: cypress-codeship-test
       command: npm run env:run

@@ -3,7 +3,7 @@
   steps:
     - name: "print env vars"
       service: cypress-codeship-test
-      command: $(npm bin)/print-env CI
+      command: npm run npm run print-env
 
     - name: "Ls -la"
       service: cypress-codeship-test

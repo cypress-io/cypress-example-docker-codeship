@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:verify": "cypress verify",
     "cy:run": "cypress run",
-    "env:run": "print-env CI && npm run cy:run"
+    "env:run": "npm run print-env && npm run cy:run",
+    "print-env": "print-env CI"
   },
   "repository": {
     "type": "git",

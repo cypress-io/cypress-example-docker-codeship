@@ -10,7 +10,7 @@
     "cy:open": "cypress open",
     "env:run": "npm run print-env && npm run cy:run",
     "env:run:record": "npm run print-env && npm run cy:run -- --record",
-    "print-env": "print-env CI"
+    "print-env": "print-env CI && print-env CODESHIP"
   },
   "repository": {
     "type": "git",

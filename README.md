@@ -1,8 +1,11 @@
-> Cypress + Docker + Codeship = ❤️
+> Cypress + Docker + Codeship Pro = ❤️
 
-[ ![Codeship Status for cypress-io/cypress-example-docker-codeship](https://app.codeship.com/projects/c989dc20-2399-0135-8805-66761da64e8c/status?branch=master)](https://app.codeship.com/projects/222054) [![Greenkeeper badge](https://badges.greenkeeper.io/cypress-io/cypress-example-docker-codeship.svg)](https://greenkeeper.io/)
+[ ![Codeship Status for cypress-io/cypress-example-docker-codeship](https://app.codeship.com/projects/c989dc20-2399-0135-8805-66761da64e8c/status?branch=master)](https://app.codeship.com/projects/222054) [![renovate-app badge][renovate-badge]][renovate-app]
 
-Running your Cypress E2E tests on Codeship Pro CI is very simple.
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
+
+Running your Cypress E2E tests on [Codeship Pro CI][codeship pro] is very simple.
 You can either start with a base image
 [cypress/base](https://hub.docker.com/r/cypress/base/) with all dependencies.
 
@@ -68,3 +71,5 @@ If you find problems with Cypress and CI, please
 - ask in our [Gitter channel](https://gitter.im/cypress-io/cypress)
 - find an existing [issue](https://github.com/cypress-io/cypress/issues)
   or open a new one
+
+[codeship pro]: https://codeship.com/features/pro

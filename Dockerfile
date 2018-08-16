@@ -7,7 +7,7 @@ RUN node --version
 RUN npm --version
 WORKDIR /home/node/app
 # copy our test page and test files
-COPY index.html cypress.json package.json ./
+COPY index.html cypress.json package.json package-lock.json ./
 COPY cypress ./cypress
 
 # install NPM dependencies and Cypress binary

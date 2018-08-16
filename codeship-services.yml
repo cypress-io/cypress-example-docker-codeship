@@ -2,6 +2,7 @@ cypress-codeship-test:
   build:
     image: cypress/cypress_codeship_test
     dockerfile: Dockerfile
+  encrypted_env_file: env.encrypted
   environment:
     # enable debug logs to figure out any problems
     # - DEBUG=cypress:*

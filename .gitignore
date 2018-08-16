@@ -1,2 +1,4 @@
 cypress/videos/
 node_modules/
+codeship.aes
+env

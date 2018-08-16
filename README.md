@@ -62,6 +62,10 @@ Now push the changes to the repo, and watch Codeship run
 
 ![Codeship run](screenshots/codeship.png)
 
+## Recording
+
+The tests are recorded on [Cypress Dashboard](https://dashboard.cypress.io/#/projects/9q15n7/runs). The `CYPRESS_RECORD_KEY` is encrypted following [Codeship Pro documentation](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/)
+
 ## Happy testing
 
 If you find problems with Cypress and CI, please

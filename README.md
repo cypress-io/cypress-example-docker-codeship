@@ -11,28 +11,27 @@ You can either start with a base image
 
 1. Create test image
 
-Use [Dockerfile](Dockerfile) to build a test image.
-If you use `cypress/base` image you would need to install NPM dependencies
-that includes Cypress.
+Use [Dockerfile](Dockerfile) to build a test image. If you use `cypress/base` image you would need to install NPM dependencies that includes Cypress.
 
 ```
-FROM cypress/base:6
+FROM cypress/base:10
 WORKDIR /app
 # Copy our test page and test files
 COPY index.html ./
 COPY cypress.json ./
 COPY package.json ./
 COPY cypress ./cypress
+# Install npm dependencies, can also use "npm ci"
 RUN npm install
 ```
 
 2. Define Codeship build step
 
 Use [codeship-services.yml](codeship-services.yml) file to
-build `cypress/cypress_codeship_test` image (from the above Dockerfile).
+build `cypress/cypress-codeship-test` image (from the above Dockerfile).
 
 ```yaml
-cypress_codeship_test:
+cypress-codeship-test:
   build:
     image: cypress/cypress_codeship_test
     dockerfile: Dockerfile
@@ -45,7 +44,7 @@ and run one or more E2E tests in parallel or in sequence.
 
 ```yaml
 - name: "Cypress E2E tests"
-  service: cypress_codeship_test
+  service: cypress-codeship-test
   command: npm run cy:run
 ```
 

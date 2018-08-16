@@ -1,10 +1,11 @@
-cypress_codeship_test:
+cypress-codeship-test:
   build:
     image: cypress/cypress_codeship_test
     dockerfile: Dockerfile
   environment:
     # enable debug logs to figure out any problems
     # - DEBUG=cypress:*
+    # are these still necessary?
     # enable colors
     - TERM=xterm
     # avoid million NPM install messages

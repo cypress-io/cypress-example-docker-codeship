@@ -10,6 +10,10 @@ WORKDIR /home/node/app
 COPY index.html cypress.json package.json package-lock.json ./
 COPY cypress ./cypress
 
+# avoid many lines of progress bars during install
+# https://github.com/cypress-io/cypress/issues/1243
+ENV CI=1
+
 # install NPM dependencies and Cypress binary
 RUN npm ci
 # check if the binary was installed successfully

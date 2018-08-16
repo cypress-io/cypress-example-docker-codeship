@@ -9,7 +9,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "env:run": "npm run print-env && npm run cy:run",
-    "env:run:record": "npm run print-env && npm run cy:run -- --record --parallel",
+    "env:run:record": "npm run print-env && npm run cy:run -- --record",
     "print-env": "print-env CI"
   },
   "repository": {

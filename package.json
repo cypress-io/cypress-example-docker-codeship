@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-docker-codeship#readme",
   "devDependencies": {
-    "@bahmutov/print-env": "1.2.1",
+    "@bahmutov/print-env": "1.3.0",
     "cypress": "4.2.0"
   }
 }
